@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toobar"
+        android:background="@color/colorPrimary"
+        app:layout_scrollFlags="enterAlways|scroll"
+        app:titleTextColor="@color/white"
+        android:theme="@style/toolbar_theme"
+        app:popupTheme="@style/OverFlowMenuTheme"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_line_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toobar"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imv_wechat"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/icon_wechat"/>
+
+
+        <TextView
+            android:id="@+id/tv_wechat_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_toRightOf="@id/imv_wechat"
+            android:layout_alignTop="@id/imv_wechat"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="标题栏"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imv_wechat"
+            android:layout_toRightOf="@id/imv_wechat"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textSize="16sp"
+            android:maxEms="13"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="微信未读消息，请查看，点击可查看详情。"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintTop_toBottomOf="@id/rl_line_wechat"
+        android:background="#DCDCDC"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_line_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line_1"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imv_alipay"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/icon_alipay"/>
+
+        <TextView
+            android:id="@+id/tv_alipay_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_toRightOf="@id/imv_alipay"
+            android:layout_alignTop="@id/imv_alipay"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="标题栏"/>
+
+
+        <TextView
+            android:id="@+id/tv_alipay_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imv_alipay"
+            android:layout_toRightOf="@id/imv_alipay"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textSize="16sp"
+            android:maxEms="13"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="支付宝未读消息，请查看，点击可查看详情。"/>
+
+        <TextView
+            android:id="@+id/tv_alipay_message_alert"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintTop_toBottomOf="@id/rl_line_alipay"
+        android:background="#DCDCDC"/>
+
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@id/line_2"/>
+
+</android.support.constraint.ConstraintLayout>

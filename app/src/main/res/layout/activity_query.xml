@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toobar"
+        android:background="@color/colorPrimary"
+        app:layout_scrollFlags="enterAlways|scroll"
+        app:titleTextColor="@color/white"
+        android:theme="@style/toolbar_theme"
+        app:popupTheme="@style/OverFlowMenuTheme"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <EditText
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:hint="请查询"
+            android:textColorHint="#99ffffff"
+            android:background="@null"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MainTheme11" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyDetailAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SlideBackTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="OverFlowMenuTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="actionMenuTextColor">@color/color_212121</item>-->
+        <!-- 设置Menu菜单的背景色 -->
+        <item name="android:itemBackground">@color/white</item>
+        <!-- 设置Menu菜单的字体颜色 -->
+        <item name="android:textColorPrimary">@android:color/black</item>
+
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="toolbar_theme" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <!--NavigationIcon的颜色-->
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MyAlertDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="innerrect">
+        <attr name="inner_width" format="dimension"/><!-- 控制扫描框的宽度 -->
+        <attr name="inner_height" format="dimension"/><!-- 控制扫描框的高度 -->
+        <attr name="inner_margintop" format="dimension" /><!-- 控制扫描框距离顶部的距离 -->
+        <attr name="inner_corner_color" format="color" /><!-- 控制扫描框四角的颜色 -->
+        <attr name="inner_corner_length" format="dimension" /><!-- 控制扫描框四角的长度 -->
+        <attr name="inner_corner_width" format="dimension" /><!-- 控制扫描框四角的宽度 -->
+        <attr name="inner_scan_bitmap" format="reference" /><!-- 控制扫描图 -->
+        <attr name="inner_scan_speed" format="integer" /><!-- 控制扫描速度 -->
+        <attr name="inner_scan_iscircle" format="boolean" /><!-- 控制小圆点是否展示 -->
+    </declare-styleable>
+
+</resources>

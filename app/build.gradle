@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "cn.landi.playandroid"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+//        vectorDrawables.generatedDensities('xhdpi', 'xxhdpi')
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api var.appcompat
+    api var.design
+    api var.constraint_layout
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //ARoute
+    implementation 'com.alibaba:arouter-api:1.4.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //banner
+    implementation 'com.youth.banner:banner:1.4.10'
+    //下拉和上滑加载
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
+    //BaseViewHodler
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
+    //流式布局
+    implementation 'com.google.android:flexbox:1.0.0'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //右上角红点
+    implementation 'q.rorbin:badgeview:1.1.3'
+
+    //日志上传到腾讯云
+    //compile 'com.tencent.qcloud:cosxml:5.4.19'
+    //compile ('com.tencent.qcloud:cosxml:5.4.19'){
+    // exclude group:'com.tencent.qcloud', module: 'mtaUtils' //关闭mta上报功能
+    //}
+    implementation 'com.tencent.qcloud:cosxml-lite:5.4.19'
+    implementation ('com.tencent.qcloud:cosxml-lite:5.4.19'){
+        exclude group:'com.tencent.qcloud', module: 'mtaUtils' //关闭mta上报功能
+    }
+
+    //Retrofit 网络框架使用
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0' // 必要依赖，和Rxjava结合必须用到，下面会提到
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0' // 必要依赖，解析json字符所用
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1' //非必要依赖， log依赖，如果需要打印OkHttpLog需要添加
+
+    /* Stepview */
+    implementation 'com.github.baoyachi:StepView:1.9'
+
+    implementation 'com.shuhart.stepview:stepview:1.4.0'
+
+    implementation 'liji.library.dev:citypickerview:3.1.13'
+    implementation project(path: ':componentlib')
+
+//    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    implementation project(path: ':zxing')
+
+}

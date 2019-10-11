@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_1">
+
+        <item
+            android:id="@+id/action_fold_toorbar"
+            android:title="折叠toolbar"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item
+            android:id="@+id/action_toolbar"
+            android:title="toolbar"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_sliding_pane_layout"
+            android:title="SlidingPaneLayout"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_swipe_back1"
+            android:title="滑动返回1"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_swipe_back2"
+            android:title="滑动返回2"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_unread"
+            android:title="未读消息"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_dynamic"
+            android:title="动态创建布局"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_mydialog"
+            android:title="自定义对话框"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_upload_log"
+            android:title="腾讯云日志上传"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_retrofit"
+            android:title="Retrofit"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_stepview"
+            android:title="流程图"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_gridview"
+            android:title="gridview"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_jsview"
+            android:title="jsview"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_myeventbus"
+            android:title="myeventbus"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_scan_qrcode"
+            android:title="scanQrCode"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_zxing"
+            android:title="zxing"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_bt"
+            android:title="蓝牙"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_myglide"
+            android:title="myGlide"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_inject"
+            android:title="injectview"
+            android:icon="@mipmap/icon_toolbar"/>
+
+        <item android:id="@+id/action_myhttp"
+            android:title="myhttp"
+            android:icon="@mipmap/icon_toolbar"/>
+    </group>
+
+</menu>
